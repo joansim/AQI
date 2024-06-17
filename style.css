@@ -1,0 +1,624 @@
+/*------------------------------------homepage------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+      
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position:relative;
+}
+
+.logo{
+    width: 150px;
+    height:auto;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex:1;
+    text-align:right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    position: relative;
+    
+}
+
+.nav-links ul li::after{
+    content: '';
+    width:0%;
+    height: 2px;
+    background: rgb(200, 172, 255);
+    display: block;
+    margin:auto;
+    transition: 0.5s;
+    
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+.text-box{
+    width: 90%;
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 50px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color:#fff;
+}
+
+.button{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.button:hover{
+    border: 1px solid  rgb(200, 172, 255);
+    background:  rgb(200, 172, 255);
+    transition: 0.5s;
+}
+
+/*------------------------------------------worldAQI page-------------------------------- */
+.upperAQI{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/worldaqipage.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+
+}
+
+.midAQI .intro{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    
+}
+
+.midAQI .intro .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+    margin-left: 4rem;
+
+}
+
+.midAQI .intro .video-container video{
+    width:100%;
+    border:1.5rem solid white;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.midAQI .intro .introduction{
+    flex: 1 1 40rem;
+    margin-left: 4rem;
+}
+
+.midAQI .intro .introduction h4{
+    font-weight: lighter;
+}
+
+.midAQI .intro .introduction h1{
+    font-weight: 50px;
+}
+
+.map{
+    background-color: rgba(207, 216, 234, 0.678);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.map h2{
+    text-align: center;
+}
+
+#map{
+    height: 380px;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.bottomAQI{
+    padding: 80px 0;
+}
+
+
+/* Legend container styling */
+.legend {
+    padding: 6px 8px;
+    font: 14px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
+    /*border-radius: 5px;*/
+    line-height: 24px;
+    color: #555;
+  }
+.legend h4 {
+    text-align: center;
+    font-size: 16px;
+    margin: 2px 12px 8px;
+    color: #777;
+  }
+  
+.legend span {
+    position: relative;
+    bottom: 3px;
+  }
+  
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin: 0 8px 0 0;
+    opacity: 0.7;
+  }
+  
+.legend i.icon {
+    background-size: 18px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+/*card styling*/
+.scaleDesc{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 35px;
+
+}
+
+.scaleDesc i{
+    height: 50px;
+    width: 50px;
+    background: lightgray;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+   
+}
+
+.scale .c{
+    list-style:none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    text-align: center; /* Center text horizontally */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+
+.scale .card1{
+    background: green;
+}
+
+.scale .card2{
+    background: yellow;
+}
+
+
+.scale .card3{
+    background: orange;
+}
+
+.scale .card4{
+    background: red;
+}
+
+.scale .card5{
+    background: purple;
+}
+
+.scale .card6{
+    background: darkred;
+}
+
+.scaleDesc .scale{
+    display:grid;
+    grid-auto-flow:column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.scale{
+    max-width: 1100px;
+    width:100%;
+}
+
+.bottomAQI{
+    margin-top: -200px;
+}
+
+.preventionHealth{
+    min-height: 100vh;
+    width: 100%;
+    margin-top: -200px;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/preventionHealthbg.jpg);
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgPrv, .contentPrv{
+    flex: 1;
+    padding: 20px;
+}
+
+.contentPrv {
+    max-width: 50%; /* Added to ensure the text part doesn't overflow */
+    padding-right: 20px;
+    order:1;
+    color:#fff;
+    margin-left: 4rem;
+}
+
+.contentPrv h1{
+    font-size:50px;
+}
+
+.contentPrv p{
+    font-size:larger;
+    font-weight: lighter;
+}
+
+
+.imgPrv {
+    max-width: 50%; /* Added to ensure the image part doesn't overflow */
+    order:2;
+    margin-right: 4rem;
+}
+
+.imgPrv img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*--------------------sotheastAsia AQI page here-------------------*/
+.saAQIup{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/saAQI.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+
+}
+
+.saAQImid {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.Facts {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.facts1, .facts2 {
+    flex: 1;
+    padding: 20px;
+}
+
+.facts1 {
+    max-width: 50%; /* Added to ensure the text part doesn't overflow */
+    padding-right: 20px;
+}
+
+.facts2 {
+    max-width: 50%; /* Added to ensure the image part doesn't overflow */
+}
+
+.facts2 img {
+    width: 100%;
+    height: auto;
+}
+
+.saAQImid .Facts .facts1 h4{
+    font-weight: lighter;
+}
+
+
+.saAQIdown{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding-top: 2em;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/saAQI2.jpg);
+}
+
+.saAQIdown h2{
+    color:#fff;
+}
+
+.country {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px 0; /* Adjust the margin as needed */
+    text-align: center;  
+    border-radius: 10px; /*rounded corners*/
+    padding: 20px;
+    background-color: rgb(125, 136, 148, 0.5);
+}
+
+.cframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+/*---------------------------Impact & sol page--------------------------------------*/
+.impheader{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/impPage.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+}
+
+.impbottom{
+    background-color: #d3e0ec;
+    margin-top: -2.5em;
+}
+
+.causesheader{
+    margin:2em;
+    text-align: center;
+    padding-top: 2em;
+}
+
+.effectheader, .solutionheader{
+    margin-top: 4em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.causesheader, .effectheader, .solutionheader h1{
+    font-size: 20px;
+}
+
+.causesheader .Games{
+    text-align:left;
+    font-size: 2rem;
+    color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+    margin-left: .2em;
+    margin-right: .2em;
+    background: rgb(186, 186, 238);
+    border-radius: 4rem;
+}
+
+.effectheader .Games, .solutionheader .Games{
+    text-align:left;
+    font-size: 2rem;
+    color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+    margin-left: 4em;
+    margin-right: 4em;
+    background: rgb(186, 186, 238);
+    border-radius: 4rem;
+}
+
+
+/*flip card styling*/
+.Flip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    margin: 2em;
+}
+
+
+.container{
+    width: 300px;
+    height: 350px;
+    perspective: 500px;
+    margin: 10px;
+}
+
+.container:hover > .card{ /*means the container which is initially fix also need to add on the rotate action*/
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card{
+    height: 100%;
+    width: 100%; /*as card is within container, so it just takes the same size as container, so is 100%*/
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d; /*let the card rotate like a 3d things, so front and back can be shown*/
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card p{
+    text-align: center;
+    margin-left:1rem;
+    margin-right:1rem;
+    font-weight: lighter;
+}
+
+.card h3{
+    text-align: center;
+
+}
+
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden; /*the back is no longer visible*/
+}
+
+
+.back{
+    background-color:white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 .front{
+    background-image: url(img/fossilfuels.jpg);
+}
+
+.card2 .front{
+    background-image: url(img/automobile.jpg);
+}
+
+.card3 .front{
+    background-image: url(img/agriculture.jpeg);
+}
+
+.card4 .front{
+    background-image: url(img/factory.jpg);
+}
+
+.card5 .front{
+    background-image: url(img/mining.jpeg);
+}
+
+.card6 .front{
+    background-image: url(img/respiratory.jpg);
+}
+
+.card7 .front{
+    background-image: url(img/globalwarming.jpg);
+}
+
+.card8 .front{
+    background-image: url(img/wildlife.jpg);
+}
+
+.card9 .front{
+    background-image: url(img/economic.png);
+}
+
+.card10 .front{
+    background-image: url(img/driveless.jpg);
+}
+
+.card11 .front{
+    background-image: url(img/goodrepair.jpg);
+}
+
+.card12 .front{
+    background-image: url(img/stopburning.jpg);
+}
+
+.card13 .front{
+    background-image: url(img/electriclawn.jpg);
+}
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

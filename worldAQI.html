@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Air Quality Index</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,
+    900&display=swap" rel="stylesheet">
+    <link  rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"  />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <section class = "upperAQI">
+        <nav>
+            <a href="home.html"><img src="img/logo.png" class = "logo"> </a>
+            <div class = "nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="worldAQI.html">World AQI</a></li>
+                    <li><a href="saAQI.html">Specific Station</a></li>
+                    <li><a href="impSol.html">Impact & Solutions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>World's Air Quality</h1>
+
+    </section>
+
+    <section class = "midAQI">
+        
+        <div class = "intro">
+            <div class = "video-container">
+                <video src = "img/worldpage.mp4" loop autoplay muted></video>
+            </div>
+
+            <div class = "introduction">
+                <h1>FACTS ON AIR POLLUTION</h1>
+                <br>
+                <h4>
+                    • Air pollution is the largest environment threat to human health worldwide.<br>
+                    <br>
+                    • More than 99% of population live in areas where the air pollution is above WHO air quality guidelines.<br>
+                    <br>
+                    • 8.43 million premature deaths annually attributed to air pollution. <br>
+                    <br>
+                    • Air pollution causes $8.1 trillion in annual global health costs. <br>
+                    <br>
+                    • 85% of all globals air poluution comes from burning fossil fuels and biomass.
+                </h4>
+                <br>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <h2>Real-time Air Quality Monitoring Worldwide</h2>
+        <br>
+        <div  id='map'></div>
+    </section>
+
+    <section class = "bottomAQI">
+        <div class = "scaleDesc">
+            <i id = "left" class="fa-solid fa-angle-left"></i>
+            <ul class = "scale">
+                <li class="c card1">
+                    <div class="img"><img src="img/good.png" alt="img"></div>
+                    <h2>Good</h2>
+                    <h1>0-50</h1>
+                    <span>Air quality is considered satisfactory, and air pollution posses little or no risk</span>
+                </li>
+                <li class="c card2">
+                    <div class="img"><img src="img/moderate.png" alt="img"></div>
+                    <h2>Moderate</h2>
+                    <h1>51-100</h1>
+                    <span>Air quality is acceptable. However, for some pollutants there may be a moderate health concern for a very small number of people who are unsually sensitive to air pollution.</span>
+                </li>
+                <li class="c card3">
+                    <div class="img"><img src="img/unhealthySensitive.png" alt="img"></div>
+                    <h2>Unhealthy for Sensitive Groups</h2>
+                    <h1>101-150</h1>
+                    <span>Members of sensitive groups may experience health effects.The general public is not likely to be affected.</span>
+                </li>
+                <li class="c card4">
+                    <div class="img"><img src="img/unhealthy.png" alt="img"></div>
+                    <h2>Unhealthy</h2>
+                    <h1>151-200</h1>
+                    <span>Everyone may begin to experience health effects. Members of sensitive groups may experience more serious health effects.</span>
+                </li>
+                <li class="c card5">
+                    <div class="img"><img src="img/veryUnhealthy.png" alt="img"></div>
+                    <h2>Very Unhealthy</h2>
+                    <h1>201-300</h1>
+                    <span>Health warnings of emergency conditions. The entire population is more likely to be affected.</span>
+                </li>
+                <li class="c card6">
+                    <div class="img"><img src="img/hazardous.png" alt="img"></div>
+                    <h2>Hazardous</h2>
+                    <h1>300+</h1>
+                    <span>Health alert: everyone may experience more serious health effects.</span>
+                </li>
+            </ul>
+            <i id ="right" class="fa-solid fa-angle-right"></i>
+        </div>
+    </section>
+
+    <section class = "preventionHealth">
+        <div class = "imgPrv">
+            <img src = "img/preventionHealth.jpg">
+        </div>
+
+        <div class = "contentPrv">
+            <h1>How to protect yourself from poor air quality?</h1> <br>
+            <h5>*AQI values at or below 100 are generally thought of as satisfactory. Starting from
+                orange scale, the air quality is considered to be harmful*</h5><br><br>
+            <p>
+                1. Reduce the time you spend outdoors & reduce the intensity of outdoor activity.<br><br>
+                2. If you must go outdoors, consider wearing a mask. You are advised to wear N95 or <br>
+                   KN95 masks as they can effectively filter out fine particles compared to cloth or dust masks.<br><br>
+                3. Keep your air indoors healthy by keeping the windows and doors closed. Run air conditioning
+                   on the recirculate setting.
+            </p>
+        
+        </div>
+
+    </section>
+
+    <script  src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>  
+    <script src = "script.js" defer></script>
+
+    
+</body>
+    
+</html>
+
+
